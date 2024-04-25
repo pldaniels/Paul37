@@ -1,0 +1,54 @@
+---
+title: "Overview of R and Git"
+author: "Paul Daniels"
+date: "2024-03-28"asd 
+output: html_document
+---
+
+## Configure your GitHub in R Studio
+
+I like to use the "usethis" package, because it is really simple to configure everything.
+
+```{r}
+install.packages("usethis")
+library(usethis)
+use_git_config(user.name="NLxResearchHub", user.email="nlxresearchhub@naswa.org")
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Basics
+
+To connect your work in R to GitHub, go to File --\> New Project --\> Version Control --\> Git --\> and add the repository URL that you cloned from GitHub. This should create a new tab in R Studio called "Git"
+
+To save files to this Repository, utilize the following steps:
+
+1)  Check the "stage" box next to the files you want to move to your repository and select "commit" to save the changes. TIP: Write a commit message to remember what you did and why. Particularly helpful when collaborating with others. 1.a) This can be considered saving to the R Studio memory. If you go to history, you can see that changes were made but are not yet visible in your GitHub repository.
+
+2)  Select "push" to save the files to GitHub.
+
+3)  Repeat these steps anytime you save changes to a file.
+
+To view the history of changes in R Studio, simply select "history" from the "Git" tab.
+
+To view the history of changes in GitHub, you can select the file of interest in the repository, then click on the most recent commit. That will open a view that shows the additions and deletions in either a split or unified view.
+
+```{r cars}
+summary(cars)
+```
+
+## Working with a Team
+
+One way to collaborate and work on someone else's repository is to "fork". This allows users to make changes to a project without affecting the original "upstream" repository. You can call updates from the upstream repository if needed by clicking the "Sync fork" button, and can propose changes from your fork to the upstream repository with "Pull Requests".
+
+1)  Go to Pull requests and select the green "Compare & Pull Request" button and review the title/description and changes.
+
+2)  Select create pull request
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
