@@ -5,7 +5,7 @@ date: "2024-03-28"asd
 output: html_document
 ---
 
-## Configure your GitHub in R Studio
+## Configure your GitHub in R Studio REMEMBER R IS BETTER PYTHON
 
 I like to use the "usethis" package, because it is really simple to configure everything.
 
